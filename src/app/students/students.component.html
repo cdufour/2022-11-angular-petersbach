@@ -1,0 +1,13 @@
+<p *ngFor="let student of students">
+    <span>{{ student.name }}</span>
+    <span> ({{ student.grade }}/100)</span>
+    <span *ngIf="student.grade < 50"> => Prévenir les autorités !</span>
+</p>
+
+<ol>
+    <li *ngFor="let student of students">{{ student.name }}</li>
+</ol>
+
+<select>
+    <option *ngFor="let student of students">{{ student.name }}</option>
+</select>

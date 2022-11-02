@@ -1,0 +1,10 @@
+*** exo 2 ***
+Créer 1 composant city-choice proposant un menu déroulant listant
+des villes (ex: Turin, Rio, etc.)
+Lorsque l'utilisateur choisit une ville, devront apparaître dans le DOM:
+- 1 photo de la ville choisie
+- le nom de la ville
+- le nom du pays d'appartenance
+
+Veuillez utiliser un composant enfant pour l'affichage 
+des données (images + textes) de la ville
