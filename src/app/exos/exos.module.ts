@@ -4,6 +4,7 @@ import { Exo1Component } from './exo1/exo1.component';
 import { QuoteComponent } from './quote/quote.component';
 import { CityChoiceComponent } from './city-choice/city-choice.component';
 import { CityShowComponent } from './city-show/city-show.component';
+import { SwitchComponent } from './switch/switch.component';
 
 
 
@@ -12,7 +13,8 @@ import { CityShowComponent } from './city-show/city-show.component';
     Exo1Component,
     QuoteComponent,
     CityChoiceComponent,
-    CityShowComponent
+    CityShowComponent,
+    SwitchComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { CityShowComponent } from './city-show/city-show.component';
     Exo1Component,
     QuoteComponent,
     CityChoiceComponent,
-    CityShowComponent
+    CityShowComponent,
+    SwitchComponent
   ]
 })
 export class ExosModule { }

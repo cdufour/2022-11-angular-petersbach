@@ -1,0 +1,10 @@
+*** exo textstats ***
+
+Créer un ensemble de composants Angular permettant de saisir un texte et d'afficher
+en temps réel (à la saisie) le nombre de lettres et le nombre de mots saisis.
+Un composant sera responsable de l'affichage du nombre de lettres.
+Un composant sera responsable de l'affichage du nombre de mots.
+Ces deux composants auront un composant parent commun qui affichera le champ de saisie.
+
+Tips
+l'événement "keyup" permet de réagir à une saisie clavier.
