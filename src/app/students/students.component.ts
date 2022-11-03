@@ -18,9 +18,35 @@ export class StudentsComponent implements OnInit {
     { name: "Valérian", grade: 99 }
   ];
 
-  constructor() { }
+  objStyle: any = { 
+    color: 'green', 
+    fontSize: '30pt'
+  };
+
+  objClass: any = {
+    winner: true,
+    loser: false
+  };
+
+  private repoStyles: any = {
+    fontSize: '40pt',
+    fontWeight: 'bold',
+    textDecoration: 'underline'
+  };
+
+  constructor() {
+    setTimeout(() => {
+      //this.objStyle.color = 'orange',
+      let mergeProps = {...this.objStyle, ...this.repoStyles};
+      this.objStyle = mergeProps;
+      this.objClass = { winner: false, loser: true};
+    }, 5000);
+  }
 
   ngOnInit(): void {
   }
 
+  getColor(i: number): string {
+    return this.students[i].grade < 50 ? 'red' : 'black';
+  }
 }
