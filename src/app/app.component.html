@@ -15,6 +15,24 @@
 <app-asc-com (message)="onMessage($event)"></app-asc-com>
 <app-asc-com (message)="onMessage($event)"></app-asc-com>
 <div>{{ childMessage }}</div>
--->
+
 <app-todo-form></app-todo-form>
 <app-todo-list></app-todo-list>
+
+<exos-meals></exos-meals>
+<app-rform></app-rform>
+<app-menu></app-menu>
+<app-todo-list></app-todo-list>
+-->
+
+<!-- custom pipe demo-->
+{{ 'Tra il dire e il fare ce di mezzo il mare' | summary: 10 }}
+
+<! custom directive demo -->
+<p appCustom="toto">Paragraphe</p>
+<h2 appCustom>Blabla</h2>
+
+
+
+
+

@@ -7,6 +7,8 @@ import { CityShowComponent } from './city-show/city-show.component';
 import { SwitchComponent } from './switch/switch.component';
 import { TextstatsModule } from './textstats/textstats.module';
 import { MainComponent } from './textstats/main.component';
+import { DbmealModule } from './dbmeal/dbmeal.module';
+import { MealsComponent } from './dbmeal/meals/meals.component';
 
 
 
@@ -20,7 +22,8 @@ import { MainComponent } from './textstats/main.component';
   ],
   imports: [
     CommonModule,
-    TextstatsModule
+    TextstatsModule,
+    DbmealModule
   ],
   exports: [
     Exo1Component,
@@ -28,7 +31,8 @@ import { MainComponent } from './textstats/main.component';
     CityChoiceComponent,
     CityShowComponent,
     SwitchComponent,
-    MainComponent
+    MainComponent,
+    MealsComponent
   ]
 })
 export class ExosModule { }

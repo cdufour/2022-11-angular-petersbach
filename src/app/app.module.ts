@@ -8,10 +8,13 @@ import { StudentsComponent } from './students/students.component';
 import { ChoiceComponent } from './choice/choice.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentCardComponent } from './student-card/student-card.component';
-import { TotoComponent } from './toto/toto.component';
-import { TataComponent } from './tata/tata.component';
 import { AscComComponent } from './asc-com/asc-com.component';
 import { TodoModule } from './todo/todo.module';
+import { RformComponent } from './rform/rform.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DemoRouteModule } from './demo-route/demo-route.module';
+import { SummaryPipe } from './summary.pipe';
+import { CustomDirective } from './custom.directive';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,17 @@ import { TodoModule } from './todo/todo.module';
     ChoiceComponent,
     StudentListComponent,
     StudentCardComponent,
-    TotoComponent,
-    TataComponent,
-    AscComComponent
+    AscComComponent,
+    RformComponent,
+    SummaryPipe,
+    CustomDirective
   ],
   imports: [
     BrowserModule,
     ExosModule,
-    TodoModule
+    TodoModule,
+    ReactiveFormsModule,
+    DemoRouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

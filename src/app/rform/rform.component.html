@@ -1,0 +1,28 @@
+<form [formGroup]="studentForm">
+    <label>Prénom
+        <input type="text" formControlName="firstname" />
+    </label>
+    <br>
+    <label>Nom
+        <input type="text" formControlName="lastname" />
+    </label>
+    <br>
+    <label>Email
+        <input type="email" formControlName="email" />
+    </label>
+
+    <section formGroupName="address">
+        <h4>Adresse</h4>
+        <label>
+            Rue
+            <input type="text" formControlName="street">
+        </label>
+        <label>
+            Code postal
+            <input type="text" formControlName="postcode">
+        </label>
+    </section>
+
+</form>
+
+<div>Formulaire valide: {{ studentForm.valid }}</div>

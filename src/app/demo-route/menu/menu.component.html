@@ -1,0 +1,14 @@
+<ul>
+    <li><a [routerLink]="['/page1']">Page 1</a></li>
+    <li><a [routerLink]="['/page2', 'maxime']">Page 2 - Maxime</a></li>
+    <li><a [routerLink]="['/page2', 'Valérian']">Page 2 - Valérian</a></li>
+</ul>
+
+<!-- point d'ancrage des composants chargés par routage -->
+
+<hr>
+<button (click)="onClick()">Click</button>
+<app-page2 [msg]="test"></app-page2>
+<hr>
+
+<router-outlet></router-outlet>

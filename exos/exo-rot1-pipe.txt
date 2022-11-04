@@ -1,0 +1,6 @@
+*** exo 1 ***
+Créer un pipe "rot1" transformant une chaîne dans son équivalent 
+par rotation d'une unité dans l'ordre lexicographique (a -> b)
+
+exemple d'utilisation: 'abc' | rot1
+sortie: bcd

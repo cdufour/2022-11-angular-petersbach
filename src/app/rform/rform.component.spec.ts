@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { RformComponent } from './rform.component';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('RformComponent', () => {
+  let component: RformComponent;
+  let fixture: ComponentFixture<RformComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ RformComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(RformComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,5 +20,4 @@ describe('ChildComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

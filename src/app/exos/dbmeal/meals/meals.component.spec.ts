@@ -1,18 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { MealsComponent } from './meals.component';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('MealsComponent', () => {
+  let component: MealsComponent;
+  let fixture: ComponentFixture<MealsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ MealsComponent ]
     })
     .compileComponents();
+  });
 
-    fixture = TestBed.createComponent(ChildComponent);
+  beforeEach(() => {
+    fixture = TestBed.createComponent(MealsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,5 +22,4 @@ describe('ChildComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

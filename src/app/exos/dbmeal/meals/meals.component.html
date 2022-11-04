@@ -1,0 +1,17 @@
+<select [(ngModel)]="seletectedCategory">
+  <option value="">Categorie</option>
+  <option *ngFor="let category of categories">
+    {{ category }}
+  </option>
+</select>
+
+<button 
+  (click)="handleClick()" 
+  [disabled]="seletectedCategory === ''">
+  Miam Miam
+</button>
+
+<div *ngFor="let m of meals">
+  <h4>{{ m.strMeal }}</h4>
+  <img [src]="m.strMealThumb" [alt]="m.strMeal" />
+</div>

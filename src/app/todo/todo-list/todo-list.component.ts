@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
-import { map } from 'rxjs';
+import { map, switchMap, filter, take, tap } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -44,6 +44,28 @@ export class TodoListComponent implements OnInit {
         this.filteredTodos = todos;
       })
       ;
+
+      const source$ = this.todoService.getTodosAsync();
+
+      source$
+        .pipe(
+          map(todos => todos[0])
+        )
+        .subscribe(todo => console.log(todo.title))
+
+      source$
+          .pipe(
+            switchMap(todos => todos),
+            map(todo => todo.title),
+            map(title => title.toUpperCase()),
+            filter(title => title.length > 50),
+            take(5),
+            tap(title => {
+              console.log('tap => ' + title.substr(0,5))
+            })
+          )
+          .subscribe((title) => console.log(title))
+      
 
   }
 

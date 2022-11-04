@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { Page2Component } from './page2.component';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('Page2Component', () => {
+  let component: Page2Component;
+  let fixture: ComponentFixture<Page2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ Page2Component ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(Page2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,5 +20,4 @@ describe('ChildComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });
