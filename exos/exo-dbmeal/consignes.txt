@@ -1,0 +1,16 @@
+*** exo dbmeal ***
+Créer un composant affichant une liste de repas (titre + photo).
+
+Le composant doit permettre:
+- le choix d'une catégorie culinaire via un menu déroulant  
+- l'envoi d'une requête http par clic sur bouton de validation 
+
+La liste des réponses sera obtenue par requête http et utilisation d'un service
+
+Endpoint à requêter: https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+liste serveur renvoie une réponse json
+
+La valeur du paramètre d'url "c" (ici "Seafood") sera automatiquement  
+alimentée par l'option choisie dans le menu déroulant
+
+Exemples de catégorie: Beef, Chicken, Dessert, Lamb, Pasta

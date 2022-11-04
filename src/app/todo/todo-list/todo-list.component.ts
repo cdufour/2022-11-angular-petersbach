@@ -12,6 +12,9 @@ import { map } from 'rxjs';
 export class TodoListComponent implements OnInit {
 
   todo: Todo | null = null;
+  todos: Todo[] = [];
+  filteredTodos: Todo[] = [];
+  isHidden: boolean = false;
 
   constructor(private todoService: TodoService) { }
 
@@ -33,12 +36,28 @@ export class TodoListComponent implements OnInit {
       .getTodosAsync()
       .pipe(
         //map(x => x.splice(0, 5))
-        map(x => x.filter(t => t.completed)),
-        map(x => x.length)
+        //map(x => x.filter(t => t.completed)),
+       // map(x => x.length)
       )
-      .subscribe(todos => console.log(todos))
+      .subscribe(todos => {
+        this.todos = todos;
+        this.filteredTodos = todos;
+      })
       ;
 
+  }
+
+  onClick() {
+    this.isHidden = !this.isHidden;
+    console.log(this.isHidden)
+    if (this.isHidden) {
+      this.filteredTodos = this.todos.filter(todo => !todo.completed);
+      
+    } else {
+      this.filteredTodos = this.todos;
+    }
+    
+    
   }
 
 }

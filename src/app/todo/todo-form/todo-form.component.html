@@ -1,1 +1,36 @@
-<p>todo-form works!</p>
+<div>
+    <h4>Todo Form</h4>
+    <form (submit)="onSubmit()" #form="ngForm">
+        <input 
+            #title="ngModel"
+            name="title"
+            minlength="4" 
+            required
+            [(ngModel)]="todo.title">
+
+        <span *ngIf="title.invalid && (title.dirty || title.touched)">
+            Titre invalide</span>
+
+        <span *ngIf="todo.title.length < 4">
+            Le titre doit contenir au moins 4 caractères</span>
+
+        <input name="completed" type="checkbox" [(ngModel)]="todo.completed">
+
+        <select name="userId" [(ngModel)]="todo.userId">
+            <option value="0">User</option>
+            <option value="1">Ludovic</option>
+            <option value="2">Baptiste</option>
+            <option value="3">Maxime</option>
+        </select>
+
+        <button [disabled]="form.invalid">Save</button>
+    </form>
+</div>
+
+<div>{{ todo | json }}</div>
+<div>Titre sale ? =>  {{ title.dirty }}</div>
+<div>Titre touché ? =>  {{ title.touched }}</div>
+<div>Formulaire valide: {{ form.valid }}</div>
+
+
+<!-- <p>{{ 'toto' | uppercase }}</p> -->

@@ -1,1 +1,7 @@
 <p>{{ todo?.title }}</p>
+
+<h3>Todo List ({{ filteredTodos.length }})</h3>
+<button (click)="onClick()">{{ isHidden ? 'Show' : 'Hide' }} completed</button>
+<p *ngFor="let t of filteredTodos">
+    {{ t.title }} ({{ t.completed ? 'completed': 'not completed' }})
+</p>
