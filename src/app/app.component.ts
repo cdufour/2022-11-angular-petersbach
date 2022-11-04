@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- title = 'demo';
+ title = 'Formation Angular';
+ childMessage: string = '';
+
+ onMessage(event: string) {
+  console.log("fiston me parle", event);
+  this.childMessage = event;
+ }
 }

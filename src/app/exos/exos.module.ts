@@ -5,6 +5,8 @@ import { QuoteComponent } from './quote/quote.component';
 import { CityChoiceComponent } from './city-choice/city-choice.component';
 import { CityShowComponent } from './city-show/city-show.component';
 import { SwitchComponent } from './switch/switch.component';
+import { TextstatsModule } from './textstats/textstats.module';
+import { MainComponent } from './textstats/main.component';
 
 
 
@@ -17,14 +19,16 @@ import { SwitchComponent } from './switch/switch.component';
     SwitchComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TextstatsModule
   ],
   exports: [
     Exo1Component,
     QuoteComponent,
     CityChoiceComponent,
     CityShowComponent,
-    SwitchComponent
+    SwitchComponent,
+    MainComponent
   ]
 })
 export class ExosModule { }
